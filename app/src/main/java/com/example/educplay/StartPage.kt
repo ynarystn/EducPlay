@@ -24,5 +24,11 @@ class StartPage : FullscreenActivity() {
             val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
         }
+
+        val btnSettings: ImageButton = findViewById(R.id.button_settings)
+        btnSettings.setOnClickListener {
+            val intent = Intent(this, Settings::class.java)
+            startActivity(intent)
+        }
     }
 }

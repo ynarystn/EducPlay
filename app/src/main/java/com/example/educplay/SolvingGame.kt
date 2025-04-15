@@ -1,5 +1,6 @@
 package com.example.educplay
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -23,6 +24,12 @@ class SolvingGame : FullscreenActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btnSettings: ImageButton = findViewById(R.id.button_settings)
+        btnSettings.setOnClickListener {
+            val intent = Intent(this, Settings::class.java)
+            startActivity(intent)
         }
 
         resultPopup = findViewById(R.id.resultPopup)
